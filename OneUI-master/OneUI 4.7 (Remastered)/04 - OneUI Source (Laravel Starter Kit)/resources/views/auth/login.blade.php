@@ -19,7 +19,7 @@
                     </div>
                     <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
                         <label for="password" class="label-input100">Mot de Passe</label>
-                        <input class="input100 @error('password') is-invalid @enderror" type="password" name="password" id="password" placeholder="Entrer Votre Mot de Passe" required autocomplete="current-password">
+                          <input class="input100 @error('password') is-invalid @enderror" type="password" name="password" id="password" placeholder="Entrer Votre Mot de Passe" required autocomplete="current-password">
                         <span class="focus-input100"></span>
                         @error('password')
                                     <span class="invalid-feedback" role="alert">
