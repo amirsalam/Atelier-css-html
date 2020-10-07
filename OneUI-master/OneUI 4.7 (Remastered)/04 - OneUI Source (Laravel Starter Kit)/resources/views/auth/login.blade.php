@@ -9,7 +9,7 @@
                     @csrf
                     <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
                         <label for="email" class="label-input100">Email</label>
-                        <input class="input100 @error('email') is-invalid @enderror" value="{{ old('email') }}" type="email" name="email" placeholder="Entrer Votre Email" id="email" required autocomplete="email" autofocus>
+                          <input class="input100 @error('email') is-invalid @enderror" value="{{ old('email') }}" type="email" name="email" placeholder="Entrer Votre Email" id="email" required autocomplete="email" autofocus>
                         <span class="focus-input100"></span>
                         @error('email')
                                     <span class="invalid-feedback" role="alert">
