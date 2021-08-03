@@ -1,0 +1,47 @@
+<table class="table" id="users">
+    <thead>
+        <tr>
+        <th *ngFor = "let column of headers">
+            {{column}}
+        </th>
+        </tr>
+    </thead>
+    <tbody>
+  
+    <tr *ngFor = "let row of users">
+      <td>
+        {{row.id}}
+      </td>
+      <td>
+        {{row.createdDate}}
+      </td>
+      <td>
+        <ng-container [ngSwitch]="true">
+          <div *ngSwitchCase="row.status === 'En validation'"><span class="on-validation">{{row.status}}</span></div>
+          <div *ngSwitchCase="row.status === 'Validé'"><span class="valide">{{row.status}}</span></div>
+          <div *ngSwitchDefault><span class="rejected">{{row.status}}</span></div>
+        </ng-container>
+      </td>
+      <td>
+        {{row.firstName}}
+      </td>
+      <td>
+        {{row.lastName}}
+      </td>
+      <td>
+        {{row.userName}}
+      </td>
+      <td>
+        {{row.registrationNumber}}
+      </td>
+      <td>
+        <i class="fa fa-trash" aria-hidden="true"></i>
+      </td>
+
+    </tr>
+</tbody>
+  
+  </table>
+
+  <a routerLink="/users" class="btn btn-success float-right" role="button" aria-disabled="true">Ajouter Utilisateur</a>
+
